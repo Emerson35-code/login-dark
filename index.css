@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+ --bg-gradient: linear-gradient(135deg, #1e1e1e, #2c2c2c ); 
+ --container-br: rgba(255,255,255, 0.08); 
+ --text-color: #f5f5f5;
+ --input-bg: rgba(255,255,255, 0.12);
+ --button-bg: #f5f5f5;
+ --button-text: #111;
+ --button-houver: #ddd;
+ --link-color: #ccc;
+}
+
+/* Modo light*/
+
+body.light {
+    --bg-gradint: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    --container-br:rgba(255,255,255, 0.9);
+    --text-color:#222;
+    --input-bg:#f0f0f0;
+    --button-bg:#222;
+    --button-text:#fff;
+    --button-houver:#444;
+    --link-color:#222;
+}
+
+body.light .toggle-theme {
+    background: rgba(246, 238, 238, 0.1);
+    color: #f1e5e5;
+
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+    
+   background: var(--bg-gradient);
+   font-family: 'Poppins', Arial, sans-serif;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+   animation: fadeIn 1.4s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translatey(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+.login-container {
+    background: var(--container-br);
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.login-container form {
+    text-align: start;
+    color: var(--text-color);
+}
+
+.login-container h2 {
+    margin-bottom: 40px;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 14px 15px;
+    margin: 10px 0 ;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: var(--input-bg);
+    color: var(--text-color);
+}
+
+.login-container input::placeholder {
+    color: #aaa;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 14px;
+    background: var(--button-bg);
+    border: none;
+    border-radius: 8px;
+    color: var(--button-text);
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.login-container button:hover {
+    background: var(--button-houver);  
+}
+
+.login-container a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+    color: var(--text-color);
+}
+
+.toggle-theme {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255,255,255, 0.1);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 18px;
+    color: var(--link-color);
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
